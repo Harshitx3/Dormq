@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormQ - My Posts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/my-posts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DormQ</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="community.html">Community</a>
+            <a href="my-posts.html" class="active">My Posts</a>
+            <a href="login.html" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="my-posts-header">
+            <h1>My Posts</h1>
+            <button class="btn-create" id="createPostBtn">
+                <i class="fas fa-plus"></i> Share knowledge or ask a question
+            </button>
+        </div>
+
+        <form class="post-form hidden" id="postForm">
+            <h3 id="formTitle">Create Post</h3>
+            <input type="text" id="postTitle" required placeholder="What do you want to ask or share?" class="post-title-input">
+            <select id="postCategory" required class="post-category-select">
+                <option value="question">Question</option>
+                <option value="confession">Confession</option>
+                <option value="general">General Discussion</option>
+            </select>
+            <textarea id="postContent" required placeholder="Write more details about your post..."></textarea>
+            <div class="post-actions">
+                <div class="post-tools">
+                    <div class="file-input">
+                        <input type="file" id="imageInput" accept="image/*">
+                        <label for="imageInput">
+                            <i class="fas fa-image"></i> Add Image
+                        </label>
+                    </div>
+                </div>
+                <div class="post-buttons">
+                    <button type="button" class="btn-cancel" id="cancelPostBtn">Cancel</button>
+                    <button type="submit" class="btn-submit" id="submitPost">Post</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="sort-options">
+            <select id="sortPosts" class="sort-select">
+                <option value="recent">Most Recent</option>
+                <option value="popular">Most Popular</option>
+            </select>
+        </div>
+
+        <div id="posts" class="posts-container"></div>
+    </main>
+
+    <template id="postTemplate">
+        <article class="post">
+            <div class="post-header">
+                <div class="post-info">
+                    <div class="post-meta">
+                        <span class="post-category"></span>
+                        <span class="post-date"></span>
+                    </div>
+                    <h4 class="post-title"></h4>
+                </div>
+                <div class="post-actions">
+                    <button class="btn-edit" title="Edit post">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-delete" title="Delete post">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <p class="post-content"></p>
+            <img class="post-image hidden" alt="Post image">
+            <div class="post-stats">
+                <div class="votes">
+                    <button class="vote-btn upvote">
+                        <i class="fas fa-chevron-up"></i>
+                        <span class="upvote-count">0</span>
+                    </button>
+                </div>
+
+                <button class="share-btn">
+                    <i class="fas fa-share"></i> Share
+                </button>
+            </div>
+        </article>
+    </template>
+
+    <script src="js/my-posts.js"></script>
+</body>
+</html>

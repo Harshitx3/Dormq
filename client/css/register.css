@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+}
+
+.form-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.form-box h2 {
+    color: #185a9d;
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    box-shadow: 0 5px 15px rgba(24, 90, 157, 0.2);
+}
+
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: -10px;
+    font-size: 0.9em;
+    background: white;
+    padding: 0 5px;
+    color: #185a9d;
+    border-radius: 3px;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.input-group select option {
+    color: #333;
+    background: #fff;
+    padding: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    box-shadow: 0 5px 15px rgba(24, 90, 157, 0.2);
+}
+
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: -10px;
+    font-size: 0.9em;
+    background: white;
+    padding: 0 5px;
+    color: #185a9d;
+    border-radius: 3px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(24, 90, 157, 0.3);
+}
+
+.switch-text {
+    margin-top: 25px;
+    text-align: center;
+    color: #666;
+}
+
+.switch-text a {
+    color: #185a9d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.switch-text a:hover {
+    color: #43cea2;
+    text-decoration: underline;
+}
+.input-group select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.input-group select option {
+    color: #333;
+    background: #fff;
+    padding: 10px;
+}
+
+.password-requirements {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.password-requirements ul {
+    list-style: none;
+    padding-left: 15px;
+    margin: 5px 0;
+}
+
+.password-requirements li {
+    position: relative;
+    padding-left: 20px;
+    margin: 3px 0;
+}
+
+.password-requirements li::before {
+    content: '✕';
+    color: #ff4444;
+    position: absolute;
+    left: 0;
+}
+
+.password-requirements li.met::before {
+    content: '✓';
+    color: #4CAF50;
+}

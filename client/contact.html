@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormQ - Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DormQ</div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="community.html">Community</a>
+            <a href="my-posts.html">My Posts</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="login.html" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contact-section">
+            <h1>Let's Chat! 👋</h1>
+            <p class="intro-text">We're always here to help you make your hostel life easier, smoother, and more fun. Whether it's about placing an order, sharing feedback, or telling us about a new idea for DormQ — we'd love to hear from you! 💬</p>
+
+            <div class="contact-cards">
+                <div class="contact-card email">
+                    <i class="fas fa-envelope"></i>
+                    <h3>📧 Email</h3>
+                    <a href="mailto:dormq2025@gmail.com">dormq2025@gmail.com</a>
+                    <p class="card-description">For general queries, feedback, and suggestions</p>
+                </div>
+
+                <div class="contact-card whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>📱 WhatsApp</h3>
+                    <a href="https://wa.me/918318939058">+91 8318939058</a>
+                    <p class="card-description">For quick order updates, delivery confirmation, and urgent help</p>
+                </div>
+            </div>
+
+            <div class="response-info">
+                <p>We aim to reply to all messages as quickly as possible so you can get what you need without delays. Our team is friendly, student-focused, and always happy to assist.</p>
+            </div>
+
+            <div class="contact-tip">
+                <h3>💡 Pro Tip for Faster Help</h3>
+                <p>When contacting us about an order, please include:</p>
+                <ul>
+                    <li>👤 Your Name</li>
+                    <li>🏠 Your Room Number</li>
+                    <li>🛍️ The Product Name & Quantity you ordered</li>
+                </ul>
+                <p class="tip-footer">The more details you share, the faster we can process your request! 🚀</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            window.location.href = 'index.html';
+        });
+
+        // Handle mobile navigation
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

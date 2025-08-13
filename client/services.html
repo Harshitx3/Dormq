@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormQ - Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DormQ</div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="community.html">Community</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Our Services</h1>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-header">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Snacks & Beverages</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li>Wide variety of snacks</li>
+                        <li>Cold and hot beverages</li>
+                        <li>Quick delivery to your room</li>
+                        <li>Special combo offers</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSchd_Ft-oWB8q6vVEzFD2T0amDGWYn_BzGLxKtiDIVeI04deA/viewform?usp=dialog" class="btn" target="_blank">Order Now</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header">
+                    <i class="fas fa-pen"></i>
+                    <h3>Stationery</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li>Notebooks & Papers</li>
+                        <li>Writing instruments</li>
+                        <li>Art supplies</li>
+                        <li>Study materials</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdpCam3YWjtk4JvDXVv3docZWGhjDRq-5iRwZYDZxGbazdvQg/viewform?usp=dialog" class="btn" target="_blank">Order Now</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header">
+                    <i class="fas fa-heart"></i>
+                    <h3>Women's Hygiene</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="features-list">
+                        <li>Sanitary Pads</li>
+                        <li>Feminine Care Products</li>
+                        <li>Discreet Packaging</li>
+                        <li>Quick Room Delivery</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQtAP6-wj-COBhKkEMl39ycluZdgQwC10NymUwAD695Wzo_g/viewform?usp=dialog" class="btn" target="_blank">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add this modal HTML before the script tag -->
+    <div id="deliveryChargesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>💰 Delivery Charges</h2>
+            <div class="charges-info">
+                <div class="charge-item">
+                    <h3>Orders below ₹500</h3>
+                    <p>Delivery charge: ₹20</p>
+                </div>
+                <div class="charge-item highlight">
+                    <h3>Orders ₹500 or above</h3>
+                    <p>Free Delivery 🎉</p>
+                </div>
+                <div class="note">
+                    <p>📌 Charges will be added automatically to your total bill before payment.</p>
+                </div>
+            </div>
+            <button class="proceed-btn">Proceed to Order</button>
+        </div>
+    </div>
+
+    <script src="js/services.js"></script>
+</body>
+</html>

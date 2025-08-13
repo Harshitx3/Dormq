@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormQ - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box signup">
+            <h2>Create Account</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <input type="text" id="signupName" required>
+                    <label>Full Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="signupEmail" required>
+                    <label>Email</label>
+                </div>
+                <!-- Remove the school/college input group -->
+                <div class="input-group">
+                    <input type="password" id="signupPassword" required>
+                    <label>Password</label>
+                    <div class="password-requirements">
+                        Password must contain:
+                        <ul>
+                            <li id="length">At least 8 characters</li>
+                            <li id="uppercase">One uppercase letter</li>
+                            <li id="lowercase">One lowercase letter</li>
+                            <li id="number">One number</li>
+                            <li id="special">One special character</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" required>
+                    <label>Confirm Password</label>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="switch-text">Already have an account? <a href="index.html">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormQ - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DormQ</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="home.html" class="active">Home</a>
+            <a href="psit-only.html">Services</a>
+            <a href="community.html">Community</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome to DormQ</h1>
+            <p>Your one-stop platform for dorm services and community interaction</p>
+        </div>
+
+        <div class="features-grid">
+            <a href="psit-only.html" class="feature-card">
+                <i class="fas fa-concierge-bell"></i>
+                <h2>Services</h2>
+                <p>Order snacks, stationery, and more with easy payment options</p>
+            </a>
+
+            <a href="community.html" class="feature-card">
+                <i class="fas fa-users"></i>
+                <h2>Community</h2>
+                <p>Connect with fellow students, ask questions, and share experiences</p>
+            </a>
+        </div>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+</html>

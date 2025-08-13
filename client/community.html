@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormQ - Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DormQ</div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="community.html" class="active">Community</a>
+            <a href="my-posts.html">My Posts</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="community-header">
+            <h1>Community Forum</h1>
+            <button class="btn-create" id="ask-question-btn">Ask Question</button>
+            <button class="btn-cancel">Cancel</button>
+        </div>
+
+        <div class="post-form hidden" id="postForm">
+            <h3 class="form-title">Ask a Question</h3>
+            <input type="text" id="postTitle" placeholder="Enter your question title..." class="post-title-input">
+            
+            <!-- Move the rating select here, after the title -->
+            <div id="reviewRating" class="review-rating hidden">
+                <select id="ratingSelect" class="rating-select">
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="3">3 - Good</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="1">1 - Poor</option>
+                </select>
+            </div>
+            
+            <select id="postCategory" class="post-category-select">
+                
+                <option value="confession">Confession</option>
+                <option value="meme">Meme 🎭</option>
+                <option value="review">Review</option>
+                <option value="general">General Discussion</option>
+            </select>
+            
+            <textarea id="postContent" placeholder="Provide more details about your question..."></textarea>
+            <div class="post-actions">
+                <div class="file-input" id="imageInputContainer">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <label for="imageInput">
+                        <i class="fas fa-image"></i> Add Image
+                    </label>
+                </div>
+                <div class="meme-tools hidden" id="memeTools">
+                    <button class="meme-tag-btn" data-tag="#dormlife">#dormlife</button>
+                    <button class="meme-tag-btn" data-tag="#studystruggles">#studystruggles</button>
+                    <button class="meme-tag-btn" data-tag="#dormfood">#dormfood</button>
+                </div>
+                <div class="post-buttons">
+                    <button class="btn-cancel" onclick="hideCreatePost()">Cancel</button>
+                    <button class="btn-submit" id="submitPost">Post</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="postsContent" class="posts-content">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search posts..." class="search-input">
+                <button id="searchButton" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="posts-filter">
+                <button class="filter-btn active" data-filter="all">All Posts</button>
+                <button class="filter-btn" data-filter="confession">Confessions</button>
+                <button class="filter-btn" data-filter="meme">Memes</button>
+                <button class="filter-btn" data-filter="review">Reviews</button>
+                <button class="filter-btn" data-filter="general">General</button>
+            </div>
+
+            <div class="sort-options">
+                <select id="sortPosts" class="sort-select">
+                    <option value="recent">Most Recent</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+            </div>
+
+            <div id="posts" class="posts-container">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Template -->
+    <template id="postTemplate">
+        <div class="post">
+            <div class="post-header">
+                <h3 class="post-title"></h3>
+                <span class="category-badge"></span>
+            </div>
+            <div class="post-meta">
+                <span class="post-author"></span>
+                <span class="post-timestamp"></span>
+            </div>
+            <div class="post-rating hidden"></div>
+            <div class="post-content"></div>
+            <img class="post-image hidden" src="" alt="">
+            <div class="post-actions">
+                <button class="upvote">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span class="upvote-count">0</span>
+                </button>
+                <button class="downvote">
+                    <i class="fas fa-thumbs-down"></i>
+                    <span class="downvote-count">0</span>
+                </button>
+                <button class="share-btn">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <script type="module" src="js/community.js"></script>
+</body>
+</html>

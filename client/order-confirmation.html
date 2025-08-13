@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormQ - Order Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/order-confirmation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DormQ</div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="community.html">Community</a>
+            <a href="my-posts.html">My Posts</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="confirmation-container">
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="confirmation-title">Thank You for Your Order! 🎉</h2>
+            <div class="confirmation-message">
+                <p>Your order has been successfully placed.</p>
+                <p>We've received your details and our team is preparing your payment link.</p>
+                <p>We will send your payment instructions to your WhatsApp as soon as possible.</p>
+                <p>Please keep your phone handy.</p>
+            </div>
+            <div class="contact-info">
+                <p>If you have any questions, feel free to contact us at:</p>
+                <p><i class="fas fa-envelope"></i> Email: dormq2025@gmail.com</p>
+                <p><i class="fab fa-whatsapp"></i> WhatsApp: 8318939058</p>
+            </div>
+            <a href="home.html" class="home-button">Return to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Handle logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            window.location.href = 'index.html';
+        });
+
+        // Handle mobile navigation
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

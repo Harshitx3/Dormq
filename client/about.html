@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DormQ - About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Replace this line -->
+    <link rel="stylesheet" href="css/community.css">
+    <!-- With this line -->
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DormQ</div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="community.html">Community</a>
+            <a href="my-posts.html">My Posts</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="about-section">
+            <h2>Welcome to DormQ — your all-in-one student hub! 🎓</h2>
+            
+            <div class="features">
+                <h3>Here you can:</h3>
+                <div class="feature-item">
+                    <h4>💬 Community</h4>
+                    <p>Share posts, post memes, write reviews, and connect with other students. Whether it's academic help 📚, hostel tips 🏠, or just a laugh 😂, this is your space.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>🛒 Services</h4>
+                    <p>Order daily essentials 🪥, stationery 🖊️, snacks 🍫, and more — delivered right to your hostel.</p>
+                </div>
+            </div>
+
+            <div class="how-it-works">
+                <h3>How it works:</h3>
+                <ol>
+                    <li>Select the item category.</li>
+                    <li>Write product name & quantity.</li>
+                    <li class="example">Example: Colgate 100g – 2 packs, Lays Green – 1 packet.</li>
+                    <li>Submit your request and relax while we handle the rest. 🚚</li>
+                </ol>
+                
+                <div class="note">
+                    <p>💡 Note: For faster service, always include brand, size, and exact quantity in your order.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            window.location.href = 'index.html';
+        });
+
+        // Handle mobile navigation
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
