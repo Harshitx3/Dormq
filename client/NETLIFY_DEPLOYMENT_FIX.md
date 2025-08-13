@@ -1,8 +1,17 @@
 # Fixing Netlify Deployment Issues
 
-## Common Error: 500 Server Error or Internal Server Error on API Calls
+## Update: Direct API Connection Implemented
 
-If you're seeing a 500 error or "Internal Server Error" when making API calls from your Netlify-deployed frontend to your Vercel backend, follow these steps to resolve the issue:
+The application has been updated to use direct API calls to the Vercel backend instead of relying on Netlify's proxy. This approach should resolve the 500 errors and "Internal Server Error" messages.
+
+### Changes Made:
+
+1. Updated all API calls to use the absolute URL: `https://dormq.vercel.app/api`
+2. Created a test page (`test-api.html`) to verify the connection
+
+## Previous Issue: 500 Server Error or Internal Server Error on API Calls
+
+If you're still seeing a 500 error or "Internal Server Error" when making API calls from your Netlify-deployed frontend to your Vercel backend, follow these steps to resolve the issue:
 
 ### 1. Check Your API Configuration
 

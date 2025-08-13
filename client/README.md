@@ -1,10 +1,20 @@
 # DormQ Client Deployment Guide
 
-## Netlify Deployment Instructions
+## API Connection Configuration
 
-### Setup
+### Direct API Connection (Current Setup)
 
-1. The project has been configured with the necessary Netlify configuration files:
+The application is now configured to connect directly to the Vercel backend:
+
+- All API calls use the absolute URL: `https://dormq.vercel.app/api`
+- This approach bypasses Netlify's proxy and connects directly to Vercel
+- A test page is available at `test-api.html` to verify the connection
+
+### Alternative: Netlify Proxy Setup
+
+If direct connection doesn't work, the project can be configured to use Netlify's proxy:
+
+1. The project includes necessary Netlify configuration files:
    - `_redirects` - Handles API proxying
    - `netlify.toml` - Contains build and redirect settings
 

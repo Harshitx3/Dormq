@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'https://dormq.vercel.app/api';
 
 // Export the base URL for use in all API calls
 export { API_BASE_URL };
