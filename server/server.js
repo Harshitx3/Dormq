@@ -23,7 +23,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Middleware
 app.use(cors({
-    origin: 'https://dormq.netlify.app',
+    origin: 'https://dormq-aggj.vercel.app/',
     credentials: true
 }));
 app.use(express.json());
