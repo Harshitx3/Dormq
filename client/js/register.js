@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('http://localhost:3006/api/auth/signup', {  
+            const response = await fetch('https://dormq.vercel.app/api/auth/signup', {  
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
