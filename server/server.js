@@ -23,7 +23,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Middleware
 app.use(cors({
-    origin: ['https://dormq.vercel.app', 'https://stellar-daffodil-7646cb.netlify.app'],
+    origin: 'https://dormq.vercel.app',
     credentials: true
 }));
 app.use(express.json());
