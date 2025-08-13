@@ -30,8 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ email, password }),
-                credentials: 'include'
+                body: JSON.stringify({ email, password })
             });
 
             const data = await response.json();

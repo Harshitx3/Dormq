@@ -23,7 +23,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Middleware
 app.use(cors({
-    origin: 'https://dormq-aggj.vercel.app',
+    origin: ['https://dormq.netlify.app', 'https://dormq-aggj.vercel.app'],
     credentials: true
 }));
 app.use(express.json());
@@ -49,10 +49,14 @@ const postRoutes = require('./routes/posts');
 
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://harsatta121:l1eJpNIOUPNLM8Ft@cluster097.sar7mjw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster097', {
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://harsatta121:l1eJpNIOUPNLM8Ft@cluster097.sar7mjw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster097';
+
+console.log('Connecting to MongoDB with URI:', MONGODB_URI.substring(0, 20) + '...');
+
+mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
+    serverSelectionTimeoutMS: 10000, // Timeout after 10s instead of 30s
     socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
 })
 .then(() => {
@@ -60,7 +64,10 @@ mongoose.connect('mongodb+srv://harsatta121:l1eJpNIOUPNLM8Ft@cluster097.sar7mjw.
 })
 .catch(err => {
     console.error('MongoDB connection error:', err);
-    process.exit(1);
+    // Don't exit process in production, just log the error
+    if (process.env.NODE_ENV === 'development') {
+        process.exit(1);
+    }
 });
 
 // Handle MongoDB connection errors
