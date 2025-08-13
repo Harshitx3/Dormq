@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
+            console.log('Sending registration data:', { name, email });
             const response = await fetch('https://dormq.vercel.app/api/auth/signup', {  
                 method: 'POST',
                 headers: {
@@ -55,7 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     name, 
                     email, 
                     password 
-                })
+                }),
+                credentials: 'include'
             });
 
             if (!response) {
