@@ -1,8 +1,8 @@
 # Fixing Netlify Deployment Issues
 
-## Common Error: 500 Server Error on API Calls
+## Common Error: 500 Server Error or Internal Server Error on API Calls
 
-If you're seeing a 500 error when making API calls from your Netlify-deployed frontend to your Vercel backend, follow these steps to resolve the issue:
+If you're seeing a 500 error or "Internal Server Error" when making API calls from your Netlify-deployed frontend to your Vercel backend, follow these steps to resolve the issue:
 
 ### 1. Check Your API Configuration
 
@@ -13,7 +13,16 @@ The API calls have been updated to use relative paths (`/api/...`) instead of ab
 Ensure these files are present in your repository:
 
 - `_redirects` - Contains the redirect rules for API calls
-- `netlify.toml` - Contains build settings and additional redirect configurations
+- `netlify.toml` - Contains build settings and additional redirect configurations with proper CORS headers:
+
+```toml
+[[redirects]]
+  from = "/api/*"
+  to = "https://dormq.vercel.app/api/:splat"
+  status = 200
+  force = true
+  headers = {Access-Control-Allow-Origin = "*", Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS", Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept, Authorization"}
+```
 
 ### 3. Deploy with the Correct Settings
 
@@ -29,10 +38,12 @@ Ensure your Vercel backend has proper CORS configuration to accept requests from
 
 ```javascript
 app.use(cors({
-    origin: ['https://your-netlify-app.netlify.app', 'http://localhost:3000'],
+    origin: ['https://dormq.vercel.app', 'https://stellar-daffodil-7646cb.netlify.app'],
     credentials: true
 }));
 ```
+
+Make sure to replace 'stellar-daffodil-7646cb.netlify.app' with your actual Netlify domain.
 
 ### 5. Clear Browser Cache
 
