@@ -23,7 +23,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Middleware
 app.use(cors({
-    origin:  ["https://dormq-9kke.vercel.app","https://dormq.onrender.com"]
+    origin:  "https://dormq-9kke.vercel.app",
     credentials: true
 }));
 app.use(express.json());
