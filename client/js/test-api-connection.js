@@ -1,8 +1,9 @@
 // Test API Connection to Vercel Backend
+import { API_BASE_URL } from './api-config.js';
 
 async function testApiConnection() {
     try {
-        const response = await fetch('https://dormq.vercel.app/api/auth/login', {
+        const response = await fetch(`${API_BASE_URL}/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

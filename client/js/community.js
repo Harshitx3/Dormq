@@ -1,3 +1,6 @@
+// Import API configuration
+import { API_BASE_URL } from './api-config.js';
+
 // Wait for DOM to be fully loaded before executing any code
 document.addEventListener('DOMContentLoaded', () => {
     // Get token from localStorage
@@ -104,8 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchPosts() {
         try {
-            // Change the API URL if your backend is on a different port or domain
-            const apiUrl = '/api/posts'; // Use relative path for proxy or same-origin
+            // Import API_BASE_URL from api-config.js if not already imported
+            const apiUrl = `${API_BASE_URL}/posts`; // Use API_BASE_URL from api-config.js
             const response = await fetch(apiUrl);
 
             if (response.status === 401) {
@@ -294,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             // Send request to server
-            const response = await fetch(`${window.location.origin}/api/posts/vote/${postId}`, {
+            const response = await fetch(`${API_BASE_URL}/posts/vote/${postId}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -461,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 formData.append('image', imageInput.files[0]);
             }
             
-            const response = await fetch('/api/posts', {
+            const response = await fetch(`${API_BASE_URL}/posts`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`

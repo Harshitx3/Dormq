@@ -1,3 +1,6 @@
+// Import API configuration
+import { API_BASE_URL } from './api-config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signupForm');
     const passwordInput = document.getElementById('signupPassword');
@@ -47,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             console.log('Sending registration data:', { name, email });
-            const response = await fetch('https://dormq.vercel.app/api/auth/signup', {  
+            const response = await fetch(`${API_BASE_URL}/auth/signup`, {  
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

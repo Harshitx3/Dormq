@@ -1,3 +1,6 @@
+// Import API configuration
+import { API_BASE_URL } from './api-config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Check if user is logged in
     const token = localStorage.getItem('token');
@@ -48,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('/api/posts', {
+            const response = await fetch(`${API_BASE_URL}/posts`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -69,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load posts
     async function loadPosts() {
         try {
-            const response = await fetch('/api/posts', {
+            const response = await fetch(`${API_BASE_URL}/posts`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
