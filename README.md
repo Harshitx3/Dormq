@@ -1,43 +1,85 @@
-# DormQ Frontend 🎓
+DormQ 🚀
 
-*A student-first platform for college communities*
+A student-first platform for college communities
 
-This repository contains the **frontend code** of DormQ, built using **HTML, CSS, and JavaScript**. It’s a simple, responsive, and lightweight implementation that provides the user interface for students to connect, share, and explore.
-
----
-
-## 🌟 Features
-
-* **Home Page** → Intro to DormQ and navigation to sections
-* **Services** → Explore or list campus services
-* **Community** → Share notes, reviews, questions, and memes
-* **Responsive Design** → Works on mobile, tablet, and desktop
-
----
+DormQ is a platform designed by students, for students. It’s the ultimate campus hub where students can:
 
 
 
-## 🎨 Customization
+🤝 Offer & Find Services (deliveries)
 
-* Update `css/style.css` to change colors, fonts, and layout.
-* Modify `js/main.js` to add interactivity or connect APIs.
-* Replace assets inside `/assets` with your own images/logos.
+💬 Post & Discuss in a community space (like Quora but only for students)
 
----
+😂 Share Memes, Notes & Reviews to make student life fun and helpful
 
-## 🤝 Contributing
+🌟 Features
 
-Contributions are welcome!
 
-1. Fork this repo
-2. Create your feature branch (`git checkout -b feature/YourFeature`)
-3. Commit changes (`git commit -m 'Add some feature'`)
-4. Push to branch (`git push origin feature/YourFeature`)
-5. Open a Pull Request
 
----
+Service Section → Get essentials delivered or offer your own services.
 
-## 📬 Contact
+Community Section → Ask questions, share advice, and connect with peers.
 
-👨‍💻 Created by **Harshit Srivastav**
-📧 Email: \[[srivastavaharshit666@gmail.co](mailto:srivastavaharshit666@gmail.co)]\\
+Memes & Reviews → Because student life isn’t complete without them.
+
+🛠️ Tech Stack
+
+Frontend: Html,Css,Javascript
+
+Backend: Node.js + Express
+
+Database: MongoDB
+
+Deployment: Vercel / Netlify
+
+
+
+🚀 Getting Started
+Prerequisites
+
+Node.js (>= 16)
+
+MongoDB (local or Atlas)
+
+Installation
+
+Clone the repo:
+
+git clone https://github.com/your-username/dormq.git
+cd dormq
+
+
+Install dependencies:
+
+npm install
+
+
+Create a .env file in the root with:
+
+MONGO_URI=your_mongodb_url
+JWT_SECRET=your_secret_key
+
+
+Run the development server:
+
+npm run dev
+
+🤝 Contributing
+
+We’re building DormQ for every student community. Contributions are welcome!
+
+Fork the project
+
+Create your feature branch (git checkout -b feature/YourFeature)
+
+Commit your changes (git commit -m 'Add YourFeature')
+
+Push to the branch (git push origin feature/YourFeature)
+
+Open a Pull Request
+
+📬 Contact
+
+👨‍💻 Created by Harshit Srivastav
+📧 Email: srivastavaharshit666@gmail.com
+
