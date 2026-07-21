@@ -83,3 +83,6 @@ Open a Pull Request
 👨‍💻 Created by Harshit Srivastav
 📧 Email: srivastavaharshit666@gmail.com
 
+Chaitanya Joshi
+Email: chaitali.1710.joshi@gmail.com
+
