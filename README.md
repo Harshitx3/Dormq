@@ -1,6 +1,6 @@
 DormQ 🚀
 
-A student-first platform for college communities
+A student-first platform for college communities.
 
 DormQ is a platform designed by students, for students. It’s the ultimate campus hub where students can:
 
